@@ -50,7 +50,6 @@ const lightbox = new SimpleLightbox('.gallery a', {
 
 export function createGallery(images) {
   const galleryItemsMarkup = images.map(createGalleryItemMarkup).join('');
-  console.log(galleryItemsMarkup);
   gallery.insertAdjacentHTML('beforeend', galleryItemsMarkup);
   lightbox.refresh();
 }
@@ -60,9 +59,9 @@ export function clearGallery() {
 }
 
 export function showLoader() {
-  loader.style.display = 'block';
+  loader.classList.add('is-visible');
 }
 
 export function hideLoader() {
-  loader.style.display = 'none';
+  loader.classList.remove('is-visible');
 }

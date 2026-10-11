@@ -7,6 +7,7 @@ function getImagesByQuery(query) {
   const searchParams = {
     key: API_KEY,
     q: query,
+    image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
   };
